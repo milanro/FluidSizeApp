@@ -1,5 +1,4 @@
-src/fluidAccess.ts
-src/TokenService.ts
+src/config*
 build/
 dist/
 node_modules/
