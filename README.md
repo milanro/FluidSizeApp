@@ -36,7 +36,6 @@ git clone https://github.com/milanro/FluidSizeApp.git
 
 ```sh
 cd FluidSizeApp
-npm run clean
 npm i
 npm run build
 ```
