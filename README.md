@@ -29,7 +29,7 @@ $ npm --version
 ```
 or higher.
 
-# Clone
+## Clone
 git clone https://github.com/milanro/FluidSizeApp.git
 
 ## Build
