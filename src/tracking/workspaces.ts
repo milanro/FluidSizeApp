@@ -22,7 +22,7 @@ import { InsecureTokenProvider } from "@fluidframework/test-client-utils";
 import {
     AzureClient,
 } from "@fluidframework/azure-client";
-import { fluidClient } from "../config/fluidAccess";
+import { fluidClient } from "../../config/fluidAccess";
 
 
 
