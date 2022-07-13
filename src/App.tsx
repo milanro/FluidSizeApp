@@ -159,48 +159,52 @@ export default function App() {
     <b style={{ borderWidth: "8px", borderColor: getColor(sumNr.nr), borderStyle: "solid", fontSize: "20px" }}>NUMBER OF SUMMARIZATIONS: {sumNr.nr} </b>
     <br></br><br></br><br></br><br></br>
 
-    <input type="checkbox" id="commitSizeCheckbox1" name="commitSize" checked={readCommitSize(workspace)===500000}
+    <input type="checkbox" id="commitSizeCheckbox1" name="commitSize" checked={readCommitSize(workspace)===5000}
+  onChange={() => setCommitSizeCheckbox(workspace, 5000)}></input>
+  <b className="defSizes">5000B</b>
+
+    <input type="checkbox" id="commitSizeCheckbox2" name="commitSize" checked={readCommitSize(workspace)===500000}
   onChange={() => setCommitSizeCheckbox(workspace, 500000)}></input>
   <b className="defSizes">500000B</b>
 
-  <input type="checkbox" id="commitSizeCheckbox1" name="commitSize" checked={readCommitSize(workspace)===750000}
+  <input type="checkbox" id="commitSizeCheckbox3" name="commitSize" checked={readCommitSize(workspace)===750000}
   onChange={() => setCommitSizeCheckbox(workspace, 750000)}></input>
   <b className="defSizes">750000B</b>
 
 
-  <input type="checkbox" id="commitSizeCheckbox1" name="commitSize" checked={readCommitSize(workspace)===768001}
+  <input type="checkbox" id="commitSizeCheckbox4" name="commitSize" checked={readCommitSize(workspace)===768001}
   onChange={() => setCommitSizeCheckbox(workspace, 768001)}></input>
   <b className="defSizes">768001B</b>
 
 
 
-  <input type="checkbox" id="commitSizeCheckbox1" name="commitSize" checked={readCommitSize(workspace)===oneMb}
+  <input type="checkbox" id="commitSizeCheckbox5" name="commitSize" checked={readCommitSize(workspace)===oneMb}
   onChange={() => setCommitSizeCheckbox(workspace, oneMb)}></input>
 <b className="defSizes">1MB</b>
 
 
 
-<input type="checkbox" id="commitSizeCheckbox2" name="commitSize" checked={readCommitSize(workspace)===2*oneMb}
+<input type="checkbox" id="commitSizeCheckbox6" name="commitSize" checked={readCommitSize(workspace)===2*oneMb}
     onChange={() => setCommitSizeCheckbox(workspace, 2*oneMb)}></input>
 <b className="defSizes">2MB</b>
 
 
-<input type="checkbox" id="commitSizeCheckbox1" name="commitSize" checked={readCommitSize(workspace)===5000000}
+<input type="checkbox" id="commitSizeCheckbox7" name="commitSize" checked={readCommitSize(workspace)===5000000}
   onChange={() => setCommitSizeCheckbox(workspace, 5000000)}></input>
   <b className="defSizes">5000000B</b>
 
 
-  <input type="checkbox" id="commitSizeCheckbox1" name="commitSize" checked={readCommitSize(workspace)===10*oneMb}
+  <input type="checkbox" id="commitSizeCheckbox8" name="commitSize" checked={readCommitSize(workspace)===10*oneMb}
   onChange={() => setCommitSizeCheckbox(workspace, 10*oneMb)}></input>
  <b className="defSizes">10MB</b>
 
 
-  <input type="checkbox" id="commitSizeCheckbox1" name="commitSize" checked={readCommitSize(workspace)===20*oneMb}
+  <input type="checkbox" id="commitSizeCheckbox9" name="commitSize" checked={readCommitSize(workspace)===20*oneMb}
   onChange={() => setCommitSizeCheckbox(workspace, 20*oneMb)}></input>
 <b className="defSizes">20MB</b>
 
 
-  <input type="checkbox" id="commitSizeCheckbox1" name="commitSize" checked={readCommitSize(workspace)===100*oneMb}
+  <input type="checkbox" id="commitSizeCheckbox10" name="commitSize" checked={readCommitSize(workspace)===100*oneMb}
   onChange={() => setCommitSizeCheckbox(workspace, 100*oneMb)}></input>
 <b className="defSizes">100MB</b>
 
@@ -243,7 +247,7 @@ function readCommitSize(workspace){
   if (!commitSizeProp){
     commitSizeProp=PropertyFactory.create("Int32");
     rootProp.insert("commitSize", commitSizeProp);
-    commitSizeProp.value=2*oneMb;
+    commitSizeProp.value=5000;
   }
   console.log("read " + commitSizeProp.value);
   return commitSizeProp.value;
